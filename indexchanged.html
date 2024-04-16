@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: linear-gradient(to right, #2a255b, #555183);
+        }
+
+        .box {
+            width: 1300px;
+            height: 700px;
+            background-color: #15122f;
+            border-radius: 40px;
+            position: relative;
+            top: 80px;
+            left: 100px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        }/*
+        .box2 {
+            width: 800px;
+            height: 320px;
+            background-color: #19162b;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            top: 380px;
+            left: 200px;
+            box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+        }*/
+        .box3 {
+            width: 230px;
+            height: 630px;
+            background-color: #19162b;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            top: 70px;
+            left: 1035px;
+            box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+        .bar {
+            width: 150px;
+            height: 100%;
+            background-color: #19162b;
+            border-radius: 40px 0 0 40px;
+            position: absolute;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+            top: 0;
+            left: 0;
+        }
+        .text {
+            position: absolute;
+            top: 22%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: 'Nexa', sans-serif;
+            font-size: 30px;
+        }
+
+        .gradient-text {
+            background: -webkit-linear-gradient(left, #FF007A, #4563FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .white-text {
+            color: white;
+        }
+        .logo {
+            width: 160px;
+            height: 160px;
+            background-image: url("./icons/logo.png");
+            background-size: cover;
+            position: absolute;
+            top: -5px;
+            left: 55%;
+            transform: translateX(-50%);
+
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+            background-image: url("./icons/icon.png");
+            background-size: cover;
+            position: absolute;
+            top: 190px;
+            left: 50px;
+            transform: translateY(-50%);
+        }
+        .icon1 {
+            width: 40px;
+            height: 40px;
+            background-image: url("./icons/icon1.png");
+            background-size: cover;
+            position: absolute;
+            top: 270px;
+            left: 50px;
+            transform: translateY(-50%);
+        }
+        .icon2 {
+            width: 40px;
+            height: 40px;
+            background-image: url("./icons/icon2.png");
+            background-size: cover;
+            position: absolute;
+            top: 350px;
+            left: 50px;
+            transform: translateY(-50%);
+        }
+        .icon3 {
+            width: 40px;
+            height: 40px;
+            background-image: url("./icons/icon3.png");
+            background-size: cover;
+            position: absolute;
+            top: 550px;
+            left: 50px;
+            transform: translateY(-50%);
+        }
+        .icon4 {
+            width: 40px;
+            height: 40px;
+            background-image: url("./icons/icon4.png");
+            background-size: cover;
+            position: absolute;
+            top: 635px;
+            left: 50px;
+            transform: translateY(-50%);
+        }
+        .icon, .icon1, .icon2, .icon3, .icon4 {
+            transition: transform 0.3s; /* This will add a smooth transition effect */
+        }
+
+        .icon:hover, .icon1:hover, .icon2:hover, .icon3:hover, .icon4:hover {
+            transform: translateY(-50%) scale(1.2); /* This will scale up the icon on hover */
+            cursor: pointer; 
+            background-color: #19162b;/* This will change the cursor to a pointer on hover */
+        }
+        .search-box {
+            position: absolute;
+            top: 18px;/*set position of search box here*/
+            left: 180px;
+            background-color: #15122f;
+        }
+
+        .search-box input {
+            background-image: url("./icons/search.png");
+            background-position: 10px center;
+            background-repeat: no-repeat;
+            background-size: 30px;
+            padding-left: 40px;
+            background-color: #1c182f;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 250px;
+            height: 20px;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+            padding-left: 40px; /* Increased the padding to accommodate the search icon */
+        }
+
+        .search-box label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+        }
+        .animated-button {
+            position: absolute;
+            background-color: #1c182f; 
+            top: 310px; /* Change this to adjust the distance from the top */
+            left: 490px;/* Change this to your desired color */
+            border: none;
+            border-radius: 50px; /* Change this to adjust the roundness of the edges */
+            color: white;
+            cursor: pointer;
+            font-size: 16px; /* Change this to adjust the size of the text */
+            padding: 15px 32px; /* Change this to adjust the size of the button */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s; 
+            width: 190px;
+            height: 50px;/* Change this to adjust the duration of the animation */
+            z-index: 1;
+        }
+
+        .animated-button:hover {
+            background-color: #120f1e; /* Change this to your desired hover color */
+        }
+
+        .animated-button:active {
+            transform: scale(0.95); /* Change this to adjust the size of the button when clicked */
+        }
+        .btnstroke {
+            width: 196px;
+            height: 56px;
+            background: -webkit-linear-gradient(left, #FF007A, #4563FF);
+            border-radius: 30px;
+            position: absolute;
+            top: 307px;
+            left: 487px;
+            box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+        .input-box {
+            position: absolute;
+            top: 240px;/*set position of search box here*/
+            left: 320px;
+            background-color: #15122f;
+        }
+        .input-box input{
+            background-image: url("./icons/prosearch.png");
+            background-position: 7px center;
+            background-repeat: no-repeat;
+            background-size: 25px;/*SET SIZE YOUR SEARCH ICON*/
+            padding-left: 60px;
+            background-color: #1c182f;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 200px;
+            height: 30px;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+            padding-left: 40px;
+        }
+        .input1-box {
+            position: absolute;
+            top: 240px;/*set position of search box here*/
+            left: 600px;
+            background-color: #15122f;
+        }
+        .input1-box input{
+            background-image: url("./icons/prosearch.png");
+            background-position: 7px center;
+            background-repeat: no-repeat;
+            background-size: 25px;
+            padding-left: 60px;
+            background-color: #1c182f;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 200px;
+            height: 30px;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+            padding-left: 40px;
+        }
+        .contain1 {
+            background-image: url("./icons/vs.png");
+            background-position: 45px center;
+            background-repeat: no-repeat;
+            background-size: 140px; /* VERSUS ICON SIZE */
+            width: 230px;
+            height: 270px;
+            background-color: #1c182fbd;
+            border-radius: 20px;
+            position: relative;
+            top: -230px;
+            left: 235px;
+            box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+
+        .contain1 .grad1 {
+            font-weight: bold;
+            font-size: 25px; /* Set your desired font size */
+            font-family: Arial, sans-serif; /* Set your desired font stack */
+            background: -webkit-linear-gradient(left, #ef6af1, #ebe4e7) ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            text-align: center;
+            position: relative;
+            top: 20px; 
+            left: 30px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .contain1 .grad2 {
+            font-weight: bold;
+            font-size: 24px; /* Set your desired font size */
+            font-family: Arial, sans-serif; /* Set your desired font stack */
+            background: -webkit-linear-gradient(left, #ebe4e7, #6ac4f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            text-align: center;
+            position: relative;
+            top: 40px; 
+            left: 2px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .contain1:hover {
+            transform: scale(1.05); /* Change the value to your desired scale factor */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text">
+            <h1>
+              <span class="gradient-text">We Make Your</span>
+              <span class="white-text">Choice Easier</span>
+            </h1>
+        </div>
+        <div class="box3"></div>
+        
+        <div class="bar">
+            <div class="logo"></div>
+            <div class="icon"></div>
+            <div class="icon1"></div>
+            <div class="icon2"></div>
+            <div class="icon3"></div>
+            <div class="icon4"></div>
+        </div>
+        <div class="search-box">
+              <input type="text" placeholder="Search a Product" >
+              <a href="#">
+                <i class="search"></i>
+              </a>
+        </div>
+
+        <div class="autofill">
+            <div class="contain1">
+                <span class="grad1">Iphone 15 Pro <br>Max</span><br><br><br><br><br>
+                <span class="grad2">Samsung Galaxy S24 Ultra</span>
+            </div>
+            
+        </div>
+        
+        
+
+        <div>
+            <form action="/compare" method="post">
+                <div class="input-box">
+                    <input type="text" name="p1" class="inp1" placeholder="Enter Product Name 1" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input1-box">
+                    <input type="text" name="p2" class="inp2" placeholder="Enter Product Name 2" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <button class="animated-button">Compare</button>
+                <div class="btnstroke"></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
