@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+:root{
+    --padding-xml: 2vmax;
+    --padding-min: 4vmax;
+    --padding-med: 7vmax;
+    --font-size: 7vmin;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(to left,#333,rgb(1, 83, 83)); */
+    background-image: url(./img/login-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.container{
+    width: 800px;
+    height: auto;
+    /* background-color: #fff; */
+    border-radius: 20px;
+    overflow: hidden;
+}
+.left{
+    padding: 0 var(--padding-min);
+    color: #fff;
+    flex-direction: column;
+    width: 50%;
+    height: 510px;
+    /* background-image: url('./img/login-bg.png'); */
+    
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+
+    background-color: #9999993f;
+    backdrop-filter: blur(10px);
+}
+.left h1{
+    margin-bottom: 10px;
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    padding: var(--padding-xml) var(--padding-min);
+
+}
+.right h1{
+    text-align: center;
+}
+.right input{
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    border: 1.2px solid #999;
+    padding: 4px 15px;
+    margin-top: 25px;
+    outline: none;
+}
+input[type="checkbox"]{
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+.r_container{
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+.r_container span{
+    font-size: 12px;
+    white-space: nowrap;
+}
+.r_container input{
+    accent-color: #000;
+}
+
+input[type="submit"]{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+}
+input[type="submit"].google{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 2px 5px grey;
+}
+.button-container{
+    width: 100%;
+    border: 2px solid red;
+}
+.google,.apple{
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 2px 5px grey;
+}
+.google-icon{
+    margin-right: 5px;
+    color: teal;
+}
+.apple-icon{
+    margin-right: 5px;
+}
+.apple{
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+.or{
+    height: 35px;
+    width: 100%;
+    position: relative;
+    padding: 0px 5px;
+    margin-top: 10px;
+
+}
+.or::before{
+    content: 'or';
+    width: 20px;
+    padding: 3px 5px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 2;
+    
+}
+.or::after{
+    content: '';
+    width: 100%;
+    height: 1.2px;
+    display: flex;
+    align-items: flex-start;
+    background-color: grey;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
